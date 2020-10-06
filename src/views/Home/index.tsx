@@ -1,8 +1,11 @@
 import React from 'react';
+import HomeLayout from '../../layout/Home';
 
 const Home = () => {
     return (
-        <p>This is the Homepage</p>
+        <HomeLayout>
+            <p>This is the Homepage</p>
+        </HomeLayout>
     )
 }
 
