@@ -1,8 +1,14 @@
 import React from 'react';
+import Header from '../../components/Header';
 
-const HomeLayout = () => {
+interface ComponentProps extends React.PropsWithChildren<unknown> {}
+
+const HomeLayout: React.FC<ComponentProps> = ({children}) => {
     return (
-        <p>This is the Home Layout</p>
+        <>
+            <Header />
+            {children}
+        </>
     )
 }
 
