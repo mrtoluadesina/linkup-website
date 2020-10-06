@@ -1,0 +1,15 @@
+@import '../../variables';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+
+    li {
+        list-style: none;
+    }
+
+    @include mediaMd {
+        max-width: 550px;
+    }
+}
