@@ -5,6 +5,7 @@ nav {
     justify-content: space-between;
     overflow: scroll;
     width: 100%;
+    max-width: 500px;
     padding: 1rem 0;
 
     li {
@@ -18,7 +19,4 @@ nav {
         }
     }
 
-    @include mediaMd {
-        max-width: 500px;
-    }
 }
