@@ -1,0 +1,24 @@
+@import '../../variables';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    width: 100%;
+    padding: 1rem 0;
+
+    li {
+        list-style: none;
+
+        a {
+            text-transform: uppercase;
+            &:hover {
+                color: $primary
+            }
+        }
+    }
+
+    @include mediaMd {
+        max-width: 500px;
+    }
+}
