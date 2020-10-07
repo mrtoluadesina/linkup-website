@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.main {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        max-width: 300px;
+        margin-top: 1rem;
+
+        .container {
+            flex-direction: column;
+            padding: 0;
+
+            .couple-name {
+                flex-direction: column;
+            }
+
+            .story-title {
+                color: $primary;
+                text-decoration: underline;
+            }
+
+            .story {
+                margin-bottom: 1rem;
+                h3, p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
