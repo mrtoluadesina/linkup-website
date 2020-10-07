@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.scss';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<unknown> {
   text: string;
