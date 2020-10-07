@@ -1,0 +1,73 @@
+@import '../../variables';
+
+.main {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        max-width: 500px;
+        width: 100%;
+        margin-top: 1rem;
+
+        .container {
+            flex-direction: column;
+            padding: 0;
+
+            .programme-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 1rem 0;
+
+                .programme-item-content {
+                    border-right: 1px solid #cccccc;
+                    flex-direction: column;
+
+                    h3 {
+                        color: $primary;
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                .programme-item-action {
+                    flex-direction: column;
+
+                    svg {
+                        path {
+                            fill: $primary !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mediaSm {
+        .big-day-banner {
+            max-width: 550px;
+        }
+
+        .content {
+            .container {
+                .programme-item {
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .programme-item-content {
+                        flex: 0 0 60%;
+                        padding-right: 2.5rem;
+                    }
+
+                    .programme-item-action {
+                        flex: 0 0 30%;
+                    }
+                }
+            }
+        }
+    }
+}
