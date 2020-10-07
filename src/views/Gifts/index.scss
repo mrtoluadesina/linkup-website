@@ -1,0 +1,64 @@
+@import "../../variables";
+
+.main {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        max-width: 500px;
+        width: 100%;
+        margin-top: 1rem;
+
+        .container {
+            flex-direction: column;
+            padding: 0;
+            max-width: 300px;
+            margin: 0 auto;
+
+            .gift-content {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    color: $primary;
+                    text-decoration: underline;
+                }
+
+                p {
+                    text-align: center;
+                    padding: 0 1rem;
+                }
+            }
+
+            .donate-card {
+                flex-direction: column;
+                align-items: center;
+
+                h3 {
+                    color: $primary;
+                    margin-bottom: 1rem;
+                }
+
+                form {
+                    width: 100%;
+                    max-width: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    @include mediaSm {
+        .big-day-banner {
+            max-width: 550px;
+        }
+
+        .content {
+            .container {
+                max-width: 580px;
+            }
+        }
+    }
+}

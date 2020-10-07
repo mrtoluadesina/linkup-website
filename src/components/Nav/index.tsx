@@ -6,8 +6,8 @@ const Nav = () => {
     return (
         <nav>
             <li><Link to="/home">Home</Link></li>
-            <li><Link to="/the-big-day">The Big Day</Link></li>
-            <li><Link to="/gift">Gift</Link></li>
+            <li><Link to="/big-day">The Big Day</Link></li>
+            <li><Link to="/gifts">Gifts</Link></li>
             <li><Link to="/photos">Photos</Link></li>
         </nav>
     )
