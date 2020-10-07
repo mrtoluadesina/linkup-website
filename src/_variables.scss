@@ -1,5 +1,5 @@
-$primary: "#FF6584";
-$offWhite: "#f5f5fb";
+$primary: #28C101;
+$offWhite: #f5f5fb;
 
 /*  Media mixin can be used by including it inside the sass style selection as shown below
  .main  {
@@ -8,6 +8,13 @@ $offWhite: "#f5f5fb";
       }
     }
 */
+
+//Media mixin for slightly bigger screens or small tablets
+@mixin mediaSm {
+  @media screen and (min-width: 484px) {
+    @content;
+  }
+}
 
 // Media mixin for medium sized screens and tablets
 @mixin mediaMd {
