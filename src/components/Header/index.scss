@@ -1,0 +1,46 @@
+@import '../../variables';
+
+header {
+    padding: 1rem 0;
+
+    .container {
+        flex-direction: column;
+
+        .top-header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .wedding-logo {
+                order: -1;
+                display: block;
+                width: 100%;
+                text-align: center;
+
+                img {
+                    max-width: 180px;
+                }
+            }
+
+        }
+    }
+
+    @include mediaSm {
+        .container {
+            .top-header {
+                flex-wrap: unset;
+
+                .side-item {
+                    flex: 0 0 20%;
+                }
+
+                .wedding-logo {
+                    order: 0;
+                    display: unset;
+                    width: unset;
+                }
+            }
+        }
+    }
+}
