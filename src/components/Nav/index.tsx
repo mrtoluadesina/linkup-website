@@ -8,7 +8,7 @@ const Nav = () => {
             <li><Link to="/event">Home</Link></li>
             <li><Link to="/event/big-day">The Big Day</Link></li>
             <li><Link to="/event/gifts">Gifts</Link></li>
-            {/* <li><Link to="/photos">Photos</Link></li> */}
+            <li><Link to="/event/photos">Photos</Link></li>
             <li><a href="https://linkup-app.netlify.app" className="btn">Attend Event</a></li>
         </nav>
     )
