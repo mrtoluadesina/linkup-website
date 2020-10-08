@@ -20,7 +20,7 @@ const Slide: React.FC<ComponentProps> = (props) => {
                 <div className="cta section-center-middle">
                     <p>Experience the first virtual owambe party</p>
                     <p>Date: {props.date}</p>
-                    <Link to={props.link} className="btn link">Request Invite</Link>
+                    <Link to={props.link} className="btn link">Join Event</Link>
                 </div>
             </div>
         </div>

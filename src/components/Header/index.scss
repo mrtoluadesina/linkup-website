@@ -9,10 +9,12 @@ header {
             align-items: center;
 
             .logo-item {
-                color: white;
-                p {
-                    font-weight: 800;
-                    letter-spacing: 1;
+                a {
+                    color: white;
+                    p {
+                        font-weight: 800;
+                        letter-spacing: 1;
+                    }
                 }
             }
 
@@ -48,6 +50,13 @@ header {
             width: 100%;
             flex-wrap: wrap;
 
+            .logo-item {
+                p {
+                    font-weight: 800;
+                    letter-spacing: 1;
+                }
+            }
+
             .wedding-logo {
                 order: -1;
                 display: block;
@@ -59,6 +68,9 @@ header {
                 }
             }
 
+            .side-item {
+                text-align: right;
+            }
         }
     }
 
