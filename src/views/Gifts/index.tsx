@@ -21,7 +21,7 @@ const Gifts = () => {
     setEmail(event.target.value);
   };
   const amount = number * 100;
-  const publicKey = "pk_test_33b4d47f42175b10708b52cf3ec037400360dc75";
+  const publicKey = process.env.REACT_APP_PAYSTACK_PUBLIC_KEY!;
 
   const componentProps = {
     email,
