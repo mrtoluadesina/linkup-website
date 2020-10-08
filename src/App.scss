@@ -62,6 +62,8 @@ img {
   width:100%;
    
   &:hover{
+    background-color: $primaryDark;
+    color: white;
     cursor: pointer;
   }
 
