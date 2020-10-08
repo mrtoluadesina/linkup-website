@@ -29,12 +29,9 @@ const Gifts = () => {
     amount,
     publicKey,
     text: "Donate",
-    onSuccess: () =>
-      alert("Thanks for doing business with us! Come back soon!!"),
-    onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+    onSuccess: () => alert("Thanks for donating!!"),
+    onClose: () => alert("Wait! You need donate!!!"),
   };
-
-  console.log(setNumber);
 
   return (
     <Wedding>
