@@ -9206,6 +9206,11 @@ react-page-scroller@2.0.0-beta:
     react-dom "^16.10.2"
     react-router-dom "^4.3.1"
 
+react-paystack@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-paystack/-/react-paystack-3.0.2.tgz#da2237e750fd818e3496b12ed8131dc79f16962f"
+  integrity sha512-bSiyb0a+DpBhTeyh0jZ0XERuwmZ1Q7Ryje9OLRvpCjkt8c9jW/VP+MhPo0pC4laA7ejS3fxdAqmx6CY84Fx/tw==
+
 react-prop-types@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/react-prop-types/-/react-prop-types-0.4.0.tgz#f99b0bfb4006929c9af2051e7c1414a5c75b93d0"
