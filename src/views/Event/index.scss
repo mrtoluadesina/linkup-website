@@ -29,4 +29,18 @@
             }
         }
     }
+
+    @include mediaMd {
+        .content {
+            max-width: 500px;
+            .container {
+                .couple-name {
+                    h2 {
+                        font-size: 50px;
+                        margin: 0.85rem;
+                    }
+                }
+            }
+        }
+    }
 }
