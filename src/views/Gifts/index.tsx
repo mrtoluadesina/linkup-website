@@ -5,7 +5,6 @@ import "./index.scss";
 import Wedding from "../../layout/Wedding";
 import Card from "../../components/Card";
 import Input from "../../components/Input";
-import Button from "../../components/Button";
 
 import { mdiCurrencyNgn, mdiEmail } from "@mdi/js";
 
@@ -68,7 +67,6 @@ const Gifts = () => {
                   onChange={handleEmailChange}
                   icon={mdiEmail}
                 />
-                {/* <Button text="Donate" /> */}
               </form>
               <PaystackButton className="paystack-button" {...componentProps} />
             </Card>
