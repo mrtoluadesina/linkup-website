@@ -6,7 +6,7 @@ import ReactPageScroller from 'react-page-scroller';
 import Slide from './Slide';
 
 const Home = () => {
-    const [state, setState] = useState<{currentPage: number | null}>({
+    const [state, setState] = useState<{ currentPage: number | null }>({
         currentPage: null
     });
 
@@ -20,9 +20,24 @@ const Home = () => {
                 pageOnChange={handlePageChange}
                 customPageNumber={state.currentPage}
             >
-                <Slide tagline="Spray money just like you would if you were there" caption="Turn up the Naija way. Turn up Naija style" date="October 10, 2020" link="/event" />
-                <Slide tagline="Spray money just like you would if you were there" caption="Turn up the Naija way. Turn up Naija style" date="October 10, 2020" link="/event" />
-                <Slide tagline="Spray money just like you would if you were there" caption="Turn up the Naija way. Turn up Naija style" date="October 10, 2020" link="/event" />
+                <Slide date="October 10, 2020" link="/event" slide={1}>
+                    <div className="content">
+                        <h2>Turn up the <span>Naija</span> way. <br /> Turn up <span>Naija</span> style</h2>
+                        <p>Spray money just like you would if you were there</p>
+                    </div>
+                </Slide>
+                <Slide date="October 10, 2020" link="/event" slide={2}>
+                    <div className="content">
+                        <h2>Turn up the <span>Naija</span> way. <br /> Turn up <span>Naija</span> style</h2>
+                        <p>Spray money just like you would if you were there</p>
+                    </div>
+                </Slide>
+                <Slide date="October 10, 2020" link="/event" slide={3}>
+                    <div className="content">
+                        <h2>Turn up the <span>Naija</span> way. <br /> Turn up <span>Naija</span> style</h2>
+                        <p>Spray money just like you would if you were there</p>
+                    </div>
+                </Slide>
             </ReactPageScroller>
         </HomeLayout>
     )
