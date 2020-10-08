@@ -22,11 +22,13 @@
                 h3 {
                     color: $primary;
                     text-decoration: underline;
+                    margin-bottom: 0;
                 }
 
                 p {
                     text-align: center;
-                    padding: 0 1rem;
+                    padding-left:0 1rem 1rem 1rem;
+                    margin-bottom:30px;  
                 }
             }
 
@@ -47,6 +49,7 @@
                     align-items: center;
                     button{
                         margin: 20px 0;
+                        font-weight:600;
                     }
                 }
                
@@ -62,6 +65,13 @@
         .content {
             .container {
                 max-width: 580px;
+            }
+        }
+
+        .gift-content{
+            h3{
+                margin-bottom: 0;
+                font-size: 35px;
             }
         }
     }

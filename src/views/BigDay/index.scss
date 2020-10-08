@@ -21,7 +21,7 @@
                 margin: 1rem 0;
 
                 .programme-item-content {
-                    border-right: 1px solid #cccccc;
+                    border-right: 0px solid #cccccc;
                     flex-direction: column;
 
                     h3 {
@@ -57,10 +57,12 @@
                 .programme-item {
                     flex-direction: row;
                     justify-content: space-between;
+                    text-align: center;
 
                     .programme-item-content {
                         flex: 0 0 60%;
                         padding-right: 2.5rem;
+                        border-right: 1px solid #cccccc;
                     }
 
                     .programme-item-action {
