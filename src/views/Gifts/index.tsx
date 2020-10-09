@@ -29,7 +29,7 @@ const Gifts = () => {
     publicKey,
     text: "Donate",
     onSuccess: () => alert("Thanks for donating!!"),
-    onClose: () => alert("Wait! You need donate!!!"),
+    onClose: () => alert("Wait! Are you sure you don't want to donate!!!"),
   };
 
   return (
