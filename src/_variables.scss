@@ -1,2 +1,42 @@
-$primary: "#FF6584";
-$offWhite: "#f5f5fb";
+$primary: #28c101;
+$primaryDark: #22a102;
+$offWhite: #f5f5fb;
+$border: #a3a3a3;
+$shadeText: #5f5f5f;
+$white: #ffffff;
+
+/*  Media mixin can be used by including it inside the sass style selection as shown below
+ .main  {
+      @include mediaLg {
+          width: 100%;
+      }
+    }
+*/
+
+//Media mixin for slightly bigger screens or small tablets
+@mixin mediaSm {
+  @media screen and (min-width: 484px) {
+    @content;
+  }
+}
+
+// Media mixin for medium sized screens and tablets
+@mixin mediaMd {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// Media mixin for small desktop screens and laptops
+@mixin mediaLg {
+  @media screen and (min-width: 980px) {
+    @content;
+  }
+}
+
+// Media mixin for large desktop sized screens
+@mixin mediaXl {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

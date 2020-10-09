@@ -1,0 +1,87 @@
+@import "../../variables";
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 1rem;
+
+    .container {
+      flex-direction: column;
+      padding: 0;
+      max-width: 300px;
+      margin: 0 auto;
+
+      .gift-content {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          color: $primary;
+          text-decoration: underline;
+          margin-bottom: 0;
+        }
+
+        p {
+          text-align: center;
+          padding-left: 0 1rem 1rem 1rem;
+          margin-bottom: 30px;
+        }
+      }
+
+      .donate-card {
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          color: $primary;
+          margin-bottom: 1rem;
+        }
+
+        form {
+          width: 100%;
+          max-width: 250px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .paystack-button {
+          cursor: pointer;
+          max-width: 250px;
+          text-align: center;
+          font-size: 14px;
+          text-transform: capitalize;
+          background-color: $primary;
+          color: $white;
+          border: none;
+          border-radius: 5px;
+          width: 100%;
+          height: 45px;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  @include mediaSm {
+    .big-day-banner {
+      max-width: 550px;
+    }
+
+    .content {
+      .container {
+        max-width: 580px;
+      }
+    }
+
+    .gift-content {
+      h3 {
+        margin-bottom: 0;
+        font-size: 35px;
+      }
+    }
+  }
+}

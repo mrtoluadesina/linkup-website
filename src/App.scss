@@ -1,3 +1,85 @@
+@import './variables';
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.section-center-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  width: 100%;
+  font-size: 30px;
+  color: $offWhite;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .container {
   display: flex;
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 2rem;
 }
+
+.justify-space {
+  display: flex;
+  justify-content: space-between;
+}
+
+.justify-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  background-color: $primary;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  border:none;
+  width:100%;
+   
+  &:hover{
+    background-color: $primaryDark;
+    color: white;
+    cursor: pointer;
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid $primary;
+  color: $primary;
+}
+
+.btn-white {
+  background-color: white;
+  color: $primary;
+}
+

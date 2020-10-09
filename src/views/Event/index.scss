@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.main {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        max-width: 300px;
+        margin-top: 1rem;
+
+        .container {
+            flex-direction: column;
+            padding: 0;
+
+            .couple-name {
+                flex-direction: column;
+            }
+
+            .story-title {
+                color: $primary;
+                text-decoration: underline;
+            }
+
+            .story {
+                margin-bottom: 1rem;
+                padding-right:30px;
+                padding-left:30px;
+                h3, p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @include mediaMd {
+        .content {
+            max-width: 500px;
+            .container {
+                .couple-name {
+                    h2 {
+                        font-size: 50px;
+                        margin: 0.85rem;
+                    }
+                }
+            }
+        }
+    }
+}

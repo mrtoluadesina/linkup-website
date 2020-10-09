@@ -1,8 +1,16 @@
 import React from 'react';
+import EventHeader from '../../components/Header/EventHeader';
+import Footer from '../../components/Footer';
 
-const Wedding = () => {
+interface ComponentProps extends React.PropsWithChildren<unknown> { }
+
+const Wedding: React.FC<ComponentProps> = ({ children }) => {
     return (
-        <p>This is the Wedding Layout</p>
+        <>
+            <EventHeader />
+            {children}
+            <Footer />
+        </>
     )
 }
 

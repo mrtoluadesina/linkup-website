@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.input-field {
+    display: flex;
+    border: 1px solid $border;
+    margin: 0.5rem 0;
+    max-width: 250px;
+    width: 100%;
+    border-radius: 5px;
+
+    .icon {
+        border-right: 1px solid $border;
+        padding: 0.5rem;
+
+        svg {
+            path {
+                fill: $shadeText !important;
+            }
+        }
+    }
+
+    input {
+        border: 0;
+        width: 100%;
+        padding: 0.5rem;
+    }
+}

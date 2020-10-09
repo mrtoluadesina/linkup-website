@@ -1,0 +1,23 @@
+@import '../../variables';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem 0;
+
+    li {
+        list-style: none;
+
+        a {
+            text-transform: uppercase;
+            
+            &:hover {
+                color: $primary
+            }
+        }
+    }
+
+}

@@ -1,0 +1,94 @@
+@import '../../variables';
+
+header {
+    padding: 1rem 0;
+
+    &.home {
+        .container {
+            flex-direction: row;
+            align-items: center;
+
+            .logo-item {
+                a {
+                    color: white;
+                    p {
+                        font-weight: 800;
+                        letter-spacing: 1;
+                    }
+                }
+            }
+
+            .menu {
+                a:not(.btn) {
+                    display: none;
+                    color: white;
+                }
+            }
+        }
+
+        @include mediaSm {
+            .container {
+                .menu {
+                    a:not(.btn) {
+                        display: unset;
+                    }
+
+                    a.btn {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        flex-direction: column;
+
+        .top-header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .logo-item {
+                p {
+                    font-weight: 800;
+                    letter-spacing: 1;
+                }
+            }
+
+            .wedding-logo {
+                order: -1;
+                display: block;
+                width: 100%;
+                text-align: center;
+
+                img {
+                    max-width: 180px;
+                }
+            }
+
+            .side-item {
+                text-align: right;
+            }
+        }
+    }
+
+    @include mediaSm {
+        .container {
+            .top-header {
+                flex-wrap: unset;
+
+                .side-item {
+                    flex: 0 0 20%;
+                }
+
+                .wedding-logo {
+                    order: 0;
+                    display: unset;
+                    width: unset;
+                }
+            }
+        }
+    }
+}
