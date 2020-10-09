@@ -22,19 +22,19 @@ const Home = () => {
             >
                 <Slide date="October 10, 2020" link="/event" slide={1}>
                     <div className="content">
-                        <h2>Turn up the <span>Naija</span> way. <br /> Turn up <span>Naija</span> style</h2>
+                        <h2>Turn up <span>Naija</span> style</h2>
                         <p>Spray money just like you would if you were there</p>
                     </div>
                 </Slide>
                 <Slide date="October 10, 2020" link="/event" slide={2}>
                     <div className="content">
-                        <h2>Turn up the <span>Naija</span> way. <br /> Turn up <span>Naija</span> style</h2>
+                        <h2>Turn up <span>Naija</span> style</h2>
                         <p>Spray money just like you would if you were there</p>
                     </div>
                 </Slide>
                 <Slide date="October 10, 2020" link="/event" slide={3}>
                     <div className="content">
-                        <h2>Turn up the <span>Naija</span> way. <br /> Turn up <span>Naija</span> style</h2>
+                        <h2>Turn up <span>Naija</span> style</h2>
                         <p>Spray money just like you would if you were there</p>
                     </div>
                 </Slide>
