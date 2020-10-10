@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import './index.scss';
 import Nav from '../Nav';
 
@@ -11,7 +11,7 @@ const EventHeader: React.FC<ComponentProps> = (props) => {
             <div className="container section-center-middle">
                 <div className="top-header justify-space">
                     <div className="logo-item">
-                    <Link to="/"><img src="/assets/images/logo.png" alt="brand" /></Link>
+                    <a href="/"><img src="/assets/images/logo.png" alt="brand" /></a>
                     </div>
                     <div className="wedding-logo">
                         <img src="/assets/images/wedding-logo.png" alt="wedding" />
