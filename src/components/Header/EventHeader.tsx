@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import './index.scss';
 import Nav from '../Nav';
 
@@ -11,13 +11,13 @@ const EventHeader: React.FC<ComponentProps> = (props) => {
             <div className="container section-center-middle">
                 <div className="top-header justify-space">
                     <div className="logo-item">
-                    <Link to="/"><img src="/assets/images/logo.png" alt="brand" /></Link>
+                    <a href="/"><img src="/assets/images/logo.png" alt="brand" /></a>
                     </div>
                     <div className="wedding-logo">
                         <img src="/assets/images/wedding-logo.png" alt="wedding" />
                     </div>
                     <div className="side-item">
-                        <p>#ttlailai</p>
+                        <a href="https://app.owambe.ng/event/detail/5f814b2654ed040025a3119e" className="btn">Attend #ttlailai</a>
                     </div>
                 </div>
                 <Nav />
