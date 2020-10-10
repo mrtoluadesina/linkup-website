@@ -9,6 +9,7 @@ header {
             align-items: center;
 
             .logo-item {
+                max-width: 120px;
                 a {
                     color: white;
                     p {
@@ -51,6 +52,7 @@ header {
             flex-wrap: wrap;
 
             .logo-item {
+                max-width: 120px;
                 p {
                     font-weight: 800;
                     letter-spacing: 1;

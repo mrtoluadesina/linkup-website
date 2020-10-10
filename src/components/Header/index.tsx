@@ -9,12 +9,12 @@ const Header: React.FC<ComponentProps> = (props) => {
         <header className="home section-center-middle">
             <div className="container justify-space">
                 <div className="logo-item">
-                    <Link to="/"><p>Owambe.ng</p></Link>
+                    <Link to="/"><img src="/assets/images/logo-alt.png" alt="brand" /></Link>
                 </div>
                 <div className="menu">
                     {/* <Link to="/">Join Event</Link> */}
-                    <a href="https://linkup-app.netlify.app" className="btn">Create Event</a>
-                    {/* <a href="https://app.owambe.ng" className="btn">Create Event</a> */}
+                    {/* <a href="https://linkup-app.netlify.app" className="btn">Create Event</a> */}
+                    <a href="https://app.owambe.ng" className="btn">Create Event</a>
                 </div>
             </div>
         </header>

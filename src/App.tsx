@@ -10,7 +10,7 @@ function App() {
     <Suspense fallback="loading...">
       <Router>
         <Route exact path='/' component={Home} />
-        <Route path='/event' component={EventRoutes} />
+        <Route exact path='/event' component={EventRoutes} />
       </Router>
     </Suspense>
   );
