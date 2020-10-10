@@ -11,7 +11,7 @@ const EventHeader: React.FC<ComponentProps> = (props) => {
             <div className="container section-center-middle">
                 <div className="top-header justify-space">
                     <div className="logo-item">
-                        <Link to="/"><p>Owambe.ng</p></Link>
+                    <Link to="/"><img src="/assets/images/logo.png" alt="brand" /></Link>
                     </div>
                     <div className="wedding-logo">
                         <img src="/assets/images/wedding-logo.png" alt="wedding" />
