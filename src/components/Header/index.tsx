@@ -14,7 +14,7 @@ const Header: React.FC<ComponentProps> = (props) => {
                 <div className="menu">
                     {/* <Link to="/">Join Event</Link> */}
                     {/* <a href="https://linkup-app.netlify.app" className="btn">Create Event</a> */}
-                    <a href="https://app.owambe.ng" className="btn">Create Event</a>
+                    <a href="https://app.owambe.ng" className="btn">Attend First Event</a>
                 </div>
             </div>
         </header>
