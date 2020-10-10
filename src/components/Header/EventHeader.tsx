@@ -17,7 +17,7 @@ const EventHeader: React.FC<ComponentProps> = (props) => {
                         <img src="/assets/images/wedding-logo.png" alt="wedding" />
                     </div>
                     <div className="side-item">
-                        <a href="https://app.owambe.ng/event/detail/5f814b2654ed040025a3119e" className="btn">Attend #ttlailai</a>
+                        <a href="https://app.owambe.ng/event/detail/5f819776dfe9b500251ba716" className="btn">Attend #ttlailai</a>
                     </div>
                 </div>
                 <Nav />
