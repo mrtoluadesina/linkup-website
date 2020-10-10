@@ -29,13 +29,13 @@ const Home = () => {
                 <Slide date="October 10, 2020" link="/event" slide={2}>
                     <div className="content">
                         <h2>Turn up <span>Naija</span> style</h2>
-                        <p>Spray money just like you would if you were there</p>
+                        <p>Interact with other attendees like you are sitting round a table</p>
                     </div>
                 </Slide>
                 <Slide date="October 10, 2020" link="/event" slide={3}>
                     <div className="content">
                         <h2>Turn up <span>Naija</span> style</h2>
-                        <p>Spray money just like you would if you were there</p>
+                        <p>Attend your loved ones parties from wherever you are</p>
                     </div>
                 </Slide>
             </ReactPageScroller>
