@@ -4,7 +4,7 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 
 interface ComponentProps extends React.HtmlHTMLAttributes<unknown> {
-    date: string,
+    date?: string,
     link: string,
     slide: number,
 }
@@ -18,9 +18,9 @@ const Slide: React.FC<ComponentProps> = (props) => {
             <div className="container slide-content">
                 {props.children}
                 <div className="cta section-center-middle">
-                    <p>Experience the first virtual owambe party</p>
-                    <p>Date: {props.date}</p>
-                    <Link to={props.link} className="btn link">View Event</Link>
+                    <p>Experience Owambe parties the virtual way</p>
+                    {/* <p>Date: {props.date}</p> */}
+                    <Link to={props.link} className="btn link">Create Event</Link>
                 </div>
             </div>
         </div>
