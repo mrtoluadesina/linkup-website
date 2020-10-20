@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './index.scss';
 
 import Wedding from '../../layout/Wedding';
 
 const Event = () => {
+    const [event, setEvent] = useState({});
+
+    useEffect(() => {
+        const data = JSON.parse(localStorage.getItem('event')!);
+        setEvent(data!);
+    }, [])
+
+    console.log(event);
+
     return (
         <Wedding>
             <div className="main section-center-middle">
