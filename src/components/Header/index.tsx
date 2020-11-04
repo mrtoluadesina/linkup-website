@@ -30,11 +30,17 @@ const Header: React.FC<ComponentProps> = (props) => {
         setHashtag(e.target.value);
     }
 
+    const config = {
+        headers: {
+            "client-id": "test_33cc43cf02e34989f01f"
+        }
+    }
+
     const handleSubmit = async (e: any) => {
         setLoading(true);
         e.preventDefault();
         try {
-            let response = await axios.get(`https://link-event.herokuapp.com/api/v1/event?hashtag=${hashtag}`);
+            let response = await axios.get(`https://link-event.herokuapp.com/api/v1/event?hashtag=${hashtag}`, config);
             let { data } = response;
             console.log(response.data);
             localStorage.setItem('event', JSON.stringify(data));
@@ -55,7 +61,7 @@ const Header: React.FC<ComponentProps> = (props) => {
                     <div className="menu">
                         {/* <Link to="/">Join Event</Link> */}
                         <a href="/" className="btn btn-white" onClick={handleClick}>Join Event</a>
-                        <a href="https://app.owambe.ng" className="btn">Create Event</a>
+                        <a href="https://app.owambe.ng" className="btn">Book a spot</a>
                         {/* <a href="https://app.owambe.ng/event/detail/5f819776dfe9b500251ba716" className="btn">Attend First Event</a> */}
                     </div>
                 </div>
