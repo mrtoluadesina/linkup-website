@@ -33,4 +33,10 @@
       background-color: white;
     }
   }
+
+  @include mediaLg {
+    .modal-content {
+      width: 30%;
+    }
+  }
 }

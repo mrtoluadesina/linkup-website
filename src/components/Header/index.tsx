@@ -32,7 +32,7 @@ const Header: React.FC<ComponentProps> = (props) => {
 
     const config = {
         headers: {
-            "client-id": "test_33cc43cf02e34989f01f"
+            "client-id": process.env.REACT_APP_CLIENT_ID!
         }
     }
 
