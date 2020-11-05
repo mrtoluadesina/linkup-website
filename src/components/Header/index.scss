@@ -20,9 +20,21 @@ header {
             }
 
             .menu {
-                a:not(.btn) {
-                    display: none;
-                    color: white;
+                display: flex;
+                align-items: center;
+                a.btn {
+                    padding: 0;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        @include mediaXs {
+            .container {
+                .menu {
+                    a {
+                        min-width: 100px;
+                    }
                 }
             }
         }
@@ -36,6 +48,23 @@ header {
 
                     a.btn {
                         margin-left: 1rem;
+                        padding: 10px 20px;
+                        background-color: $primary;
+
+                        &.btn-white {
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include mediaMd {
+            .container {
+                .menu {
+                    a:not(.btn) {
+                        display: none;
+                        color: white;
                     }
                 }
             }
@@ -81,9 +110,9 @@ header {
             .top-header {
                 flex-wrap: unset;
 
-                .side-item {
-                    flex: 0 0 20%;
-                }
+                // .side-item {
+                //     flex: 0 0 20%;
+                // }
 
                 .wedding-logo {
                     order: 0;
