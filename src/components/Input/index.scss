@@ -24,4 +24,8 @@
         width: 100%;
         padding: 0.5rem;
     }
+
+    @include mediaMd {
+        max-width: 500px;
+    }
 }

@@ -12,12 +12,14 @@ interface ComponentProps extends React.InputHTMLAttributes<unknown> {
 const Input: React.FC<ComponentProps> = props => {
     return (
         <div className="input-field">
-            <div className="icon">
-                <Icon path={props.icon || ''} size={1} />
-            </div>
+            {props.icon &&
+                <div className="icon">
+                    <Icon path={props.icon || ''} size={1} />
+                </div>
+            }
             <input {...props} />
         </div>
     );
-} 
+}
 
 export default Input;

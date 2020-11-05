@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.scss';
 import Icon from '@mdi/react';
 import { mdiCalendarRange, mdiCakeLayered, mdiPartyPopper } from '@mdi/js';
 import AddToCalendar from 'react-add-to-calendar';
 
 import Wedding from '../../layout/Wedding';
+
+interface EventProps {
+    status: string,
+    events: Array<{
+        name: string
+        description?: string
+        images: Array<string>,
+    }>
+}
 
 const BigDay = () => {
     const traditional = {
@@ -47,72 +56,100 @@ const BigDay = () => {
         endTime: '2020-10-11T00:00:00-00:00'
     };
 
+    const [event, setEvent] = useState<EventProps>({
+        status: "",
+        events: []
+    });
+
+    useEffect(() => {
+        const data = JSON.parse(localStorage.getItem('event')!);
+        setEvent(data!);
+    }, [])
+
+
+    const eventData = event.events[0];
+
+    console.log(eventData);
+
     return (
         <Wedding>
-            <div className="main section-center-middle">
-                <div className="big-day-banner">
-                    <img src="/assets/images/big-day-banner.png" alt="wedding banner" />
-                </div>
-                <div className="content">
-                    <div className="container justify-center">
-                        <div className="programme-item">
-                            <div className="programme-item-content section-center-middle">
-                                <h3>Engagement Ceremony</h3>
-                                <p>SATURDAY, OCTOBER 10, 2020 <br /> 09:00 AM</p>
+            {eventData ? (
+                <div className="main section-center-middle">
+                    <div className="big-day-banner">
+                        <img src={eventData.images[1]} alt="wedding banner" />
+                    </div>
+                    <div className="content">
+                        <div className="container justify-center">
+                            <div className="programme-item">
+                                <div className="programme-item-content section-center-middle">
+                                    <h3>Engagement Ceremony</h3>
+                                    <p>SATURDAY, OCTOBER 10, 2020 <br /> 09:00 AM</p>
+                                </div>
+                                <div className="programme-item-action section-center-middle">
+                                    <Icon path={mdiCalendarRange} size={1} />
+                                    {/* <p>Add to Calendar</p> */}
+                                    <AddToCalendar event={traditional} />
+                                </div>
                             </div>
-                            <div className="programme-item-action section-center-middle">
-                                <Icon path={mdiCalendarRange} size={1} />
-                                {/* <p>Add to Calendar</p> */}
-                                <AddToCalendar event={traditional} />
+                            <div className="programme-item">
+                                <div className="programme-item-content section-center-middle">
+                                    <h3>Church Service</h3>
+                                    <p>SATURDAY, OCTOBER 10, 2020 <br /> 02:00 PM</p>
+                                </div>
+                                <div className="programme-item-action section-center-middle">
+                                    <Icon path={mdiCalendarRange} size={1} />
+                                    {/* <p>Add to Calendar</p> */}
+                                    <AddToCalendar event={church} />
+                                </div>
                             </div>
-                        </div>
-                        <div className="programme-item">
-                            <div className="programme-item-content section-center-middle">
-                                <h3>Church Service</h3>
-                                <p>SATURDAY, OCTOBER 10, 2020 <br /> 02:00 PM</p>
+                            <div className="programme-item">
+                                <div className="programme-item-content section-center-middle">
+                                    <h3>Cocktail Hour</h3>
+                                    <p>SATURDAY, OCTOBER 10, 2020 <br /> 3:30 PM</p>
+                                </div>
+                                <div className="programme-item-action section-center-middle">
+                                    <Icon path={mdiCakeLayered} size={1} />
+                                    {/* <p>Add to Calendar</p> */}
+                                    <AddToCalendar event={cocktail} />
+                                </div>
                             </div>
-                            <div className="programme-item-action section-center-middle">
-                                <Icon path={mdiCalendarRange} size={1} />
-                                {/* <p>Add to Calendar</p> */}
-                                <AddToCalendar event={church} />
+                            <div className="programme-item">
+                                <div className="programme-item-content section-center-middle">
+                                    <h3>Reception</h3>
+                                    <p>SATURDAY, OCTOBER 10, 2020 <br /> 4:30 PM</p>
+                                </div>
+                                <div className="programme-item-action section-center-middle">
+                                    <Icon path={mdiCakeLayered} size={1} />
+                                    {/* <p>Add to Calendar</p> */}
+                                    <AddToCalendar event={reception} />
+                                </div>
                             </div>
-                        </div>
-                        <div className="programme-item">
-                            <div className="programme-item-content section-center-middle">
-                                <h3>Cocktail Hour</h3>
-                                <p>SATURDAY, OCTOBER 10, 2020 <br /> 3:30 PM</p>
-                            </div>
-                            <div className="programme-item-action section-center-middle">
-                                <Icon path={mdiCakeLayered} size={1} />
-                                {/* <p>Add to Calendar</p> */}
-                                <AddToCalendar event={cocktail} />
-                            </div>
-                        </div>
-                        <div className="programme-item">
-                            <div className="programme-item-content section-center-middle">
-                                <h3>Reception</h3>
-                                <p>SATURDAY, OCTOBER 10, 2020 <br /> 4:30 PM</p>
-                            </div>
-                            <div className="programme-item-action section-center-middle">
-                                <Icon path={mdiCakeLayered} size={1} />
-                                {/* <p>Add to Calendar</p> */}
-                                <AddToCalendar event={reception} />
-                            </div>
-                        </div>
-                        <div className="programme-item">
-                            <div className="programme-item-content section-center-middle">
-                                <h3>Party after party</h3>
-                                <p>SATURDAY, DECEMBER 19, 2020 <br /> 8:00 PM</p>
-                            </div>
-                            <div className="programme-item-action section-center-middle">
-                                <Icon path={mdiPartyPopper} size={1} />
-                                {/* <p>Add to Calendar</p> */}
-                                <AddToCalendar event={parte} />
+                            <div className="programme-item">
+                                <div className="programme-item-content section-center-middle">
+                                    <h3>Party after party</h3>
+                                    <p>SATURDAY, DECEMBER 19, 2020 <br /> 8:00 PM</p>
+                                </div>
+                                <div className="programme-item-action section-center-middle">
+                                    <Icon path={mdiPartyPopper} size={1} />
+                                    {/* <p>Add to Calendar</p> */}
+                                    <AddToCalendar event={parte} />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            ) : (
+                <div className="main section-center-middle">
+                    <div className="big-day-banner">
+                        <img src="/assets/images/big-day-banner.png" alt="wedding banner" />
+                    </div>
+                    <div className="content">
+                        <div className="container justify-center">
+                            <p>Here’s what to expect during our wedding weekend. We can’t wait to celebrate with you!</p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </Wedding>
     );
 }
