@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import Wedding from '../../layout/Wedding';
 import "./index.scss";
 
 const PublicEvents = () => {
@@ -14,13 +14,13 @@ const PublicEvents = () => {
   }, []);
 
   return (
-    <>
-      <p>This is the public events page</p>
+    <Wedding publicPage={true}>
       <div className="event_container">
         {loading
           ? "loading"
           : events.map((event, index) => {
-              return (
+            return (
+              <a href={`https://app.owambe.ng/event/detail/${event._id}`}>
                 <div key={index} className="event_card">
                   <img
                     src={event.images[0] || `/assets/images/wedding-banner.jpg`}
@@ -29,10 +29,11 @@ const PublicEvents = () => {
                   <p>{`${event.event_date} ${event.event_time}`}</p>
                   <h3>{event.name}</h3>
                 </div>
-              );
-            })}
+              </a>
+            );
+          })}
       </div>
-    </>
+    </Wedding>
   );
 };
 
