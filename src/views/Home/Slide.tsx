@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './index.scss';
 
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 interface ComponentProps extends React.HtmlHTMLAttributes<unknown> {
@@ -46,7 +45,7 @@ const Slide: React.FC<ComponentProps> = (props) => {
                 <div className="cta section-center-middle">
                     <p>Experience Owambe parties the virtual way</p>
                     {/* <p>Date: {props.date}</p> */}
-                    <a href="/" className="btn link" onClick={handleClick}>View Public Events</a>
+                    <a href="/" className="btn link" onClick={handleClick}>{loading ? 'Loading ...' : 'View Public Events'}</a>
                 </div>
             </div>
         </div>

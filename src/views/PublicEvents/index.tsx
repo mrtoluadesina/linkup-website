@@ -18,7 +18,7 @@ const PublicEvents = () => {
         events.map((event, index) => {
           return (
             <div key={index}>
-              <img src={event.images[0] || `/assets/images/wedding-banner.jpg`} alt="event image" />
+              <img src={event.images[0] || `/assets/images/wedding-banner.jpg`} alt="event" />
               <p>{`${event.event_date} ${event.event_time}`}</p>
               <h3>{event.name}</h3>
             </div>
