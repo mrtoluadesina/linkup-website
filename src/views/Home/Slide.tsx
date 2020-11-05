@@ -19,16 +19,18 @@ const Slide: React.FC<ComponentProps> = (props) => {
         }
     }
 
+    console.log(config);
+
     const handleClick = async (e: any) => {
         setLoading(true);
         e.preventDefault();
         try {
             let response = await axios.get(`https://link-event.herokuapp.com/api/v1/public-event`, config);
-            let { data } = response;
-            console.log(response.data);
-            localStorage.setItem('event', JSON.stringify(data));
-            // window.location.replace('/event');
-            window.location.href = '/event';
+            let { data: {event} } = response;
+            console.log(event);
+            localStorage.setItem('events', JSON.stringify(event));
+            setLoading(false);
+            window.location.href = '/public-events';
         } catch (error) {
             console.log(error);
         }
