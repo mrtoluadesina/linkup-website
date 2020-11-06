@@ -11,7 +11,7 @@ const Wedding: React.FC<ComponentProps> = ({ publicPage, children }) => {
         <>
             <EventHeader publicPage={publicPage} />
             {children}
-            {publicPage && <Footer />}
+            {!publicPage && <Footer />}
         </>
     )
 }
