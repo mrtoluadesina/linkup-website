@@ -20,14 +20,18 @@ const PublicEvents = () => {
           ? "loading"
           : events.map((event, index) => {
             return (
-              <a href={`https://app.owambe.ng/event/detail/${event._id}`}>
+              <a href={`https://app.owambe.ng/event/detail/${event.id}`}>
                 <div key={index} className="event_card">
-                  <img
-                    src={event.images[0] || `/assets/images/wedding-banner.jpg`}
-                    alt="event"
-                  />
-                  <p>{`${event.event_date} ${event.event_time}`}</p>
-                  <h3>{event.name}</h3>
+                  <div className="event-img">
+                    <img
+                      src={event.images[0] || `/assets/images/wedding-banner.jpg`}
+                      alt="event"
+                    />
+                  </div>
+                  <div className="event-content">
+                    <p>{`${event.event_date} ${event.event_time}`}</p>
+                    <h3>{event.name}</h3>
+                  </div>
                 </div>
               </a>
             );
